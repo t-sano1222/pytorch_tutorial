@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+    pytorch:
+        build: .
+        container_name: pytorch
+        image: pytorch-image
+        volumes:
+            - /path/to/data:/mnt
+        runtime: nvidia
+        tty: true
+        command: /bin/bash
+        ports:
+            - 8889:8889
