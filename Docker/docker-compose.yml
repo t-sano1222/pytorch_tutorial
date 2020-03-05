@@ -5,9 +5,9 @@ services:
         container_name: pytorch
         image: pytorch-image
         volumes:
-            - /path/to/data:/mnt
+            - ./../mnt:/home/jovyan/pytorch
         runtime: nvidia
         tty: true
-        command: /bin/bash
+        command: "jupyter-lab"
         ports:
-            - 8889:8889
+            - 8888:8888
